@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import Navigation from "../components/navigation"
+import ThemeChanger from "../components/themeChanger"
 import 'prismjs/themes/prism-okaidia.css';
 
 export default ({ children }) => {
@@ -18,10 +18,12 @@ export default ({ children }) => {
   return (
     <div className="site-wrapper">
       <header className="site-header">
-        <div className="site-title">
-          <Link to="/">{data.site.siteMetadata.title}</Link>
+        <div class ="top-menu">
+            <Link to="/about">About</Link>
+            <Link to="/blog">Blog</Link>
+            <Link to="/talks">Talks</Link>
+            <ThemeChanger/>
         </div>
-        <Navigation />
       </header>
       {children}
       <footer className="site-footer">

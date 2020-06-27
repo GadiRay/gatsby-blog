@@ -93,12 +93,9 @@ a {
   }
 }
 .site-header {
-  display: flex;
-  justify-content: space-between;
   padding: 20px 0;
   background: var(--site-header);
   margin-bottom: 32px;
-  align-items: center;
 }
 .site-title a {
   color: var(--primary-color);
@@ -106,6 +103,17 @@ a {
   font-weight: 900;
   text-transform: uppercase;
 }
+.site-header .top-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 8fr;
+}
+.site-header .top-menu a {
+  justify-self: start;
+}
+.site-header .top-menu .theme-changer-label {
+  justify-self: end;
+}
+
 .hero-header {
   padding: 0 0 64px;
   max-width: 980px;
